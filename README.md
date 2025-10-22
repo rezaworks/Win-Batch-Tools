@@ -80,9 +80,9 @@ Displays active network connections.
 - **Command**: `powershell -command "Get-NetTCPConnection | Select-Object LocalAddress, LocalPort, RemoteAddress, RemotePort, State"`
 
 ### 16. Clear-RAM-Cache.bat
-Clears RAM cache using Windows system idle tasks.
+Clears RAM cache using garbage collection.
 - **Usage**: No special privileges required.
-- **Command**: `rundll32.exe advapi32.dll,ProcessIdleTasks`
+- **Command**: `powershell -command "Clear-Host; for ($i = 0; $i -lt 10; $i++) { [System.GC]::Collect(); [System.GC]::WaitForPendingFinalizers(); [System.GC]::Collect() }"`
 
 ## Requirements
 - Windows 10 or later
