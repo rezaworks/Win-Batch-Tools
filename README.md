@@ -79,6 +79,11 @@ Displays active network connections.
 - **Usage**: No special privileges required.
 - **Command**: `powershell -command "Get-NetTCPConnection | Select-Object LocalAddress, LocalPort, RemoteAddress, RemotePort, State"`
 
+### 16. Clear-RAM-Cache.bat
+Clears RAM cache and forces garbage collection.
+- **Usage**: No special privileges required.
+- **Command**: `powershell -command "Clear-Host; [System.GC]::Collect(); [System.GC]::WaitForPendingFinalizers(); [System.GC]::Collect()"`
+
 ## Requirements
 - Windows 10 or later
 - PowerShell 5.1 or higher
