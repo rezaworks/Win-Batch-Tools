@@ -1,5 +1,10 @@
 # 🖥️ Windows Batch Scripts for System Maintenance
 
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/rezaworks/Win-Batch-Tools)](https://github.com/rezaworks/Win-Batch-Tools/issues)
+[![GitHub stars](https://img.shields.io/github/stars/rezaworks/Win-Batch-Tools)](https://github.com/rezaworks/Win-Batch-Tools/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/rezaworks/Win-Batch-Tools)](https://github.com/rezaworks/Win-Batch-Tools/network)
+
 A comprehensive collection of Windows batch scripts for system maintenance and management tasks. These scripts leverage modern PowerShell cmdlets for enhanced compatibility and reliability.
 
 ## 📋 Table of Contents
