@@ -10,6 +10,8 @@ A comprehensive collection of Windows batch scripts for system maintenance and m
 - [Usage](#usage)
 - [Notes](#notes)
 - [Contributing](#contributing)
+- [Code of Conduct](#code-of-conduct)
+- [Security](#security)
 - [License](#license)
 
 ## ✨ Features
@@ -124,6 +126,16 @@ Clears RAM cache using garbage collection and system idle tasks.
 ## 🤝 Contributing
 
 Feel free to suggest improvements or add new scripts! Fork the repository and submit a pull request.
+
+For detailed guidelines, see our [Contributing Guide](CONTRIBUTING.md).
+
+## 📜 Code of Conduct
+
+We are committed to fostering an open and welcoming community. Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to understand the standards we uphold.
+
+## 🔒 Security
+
+We take security seriously. If you discover a vulnerability, please report it according to our [Security Policy](SECURITY.md).
 
 ## 📄 License
 
