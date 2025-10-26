@@ -29,7 +29,7 @@ Displays disk space usage for all drives in GB.
 ### 2. ⏰ Update-System-Time.bat
 Synchronizes system time with Windows Time service.
 - **Usage**: Requires administrator privileges.
-- **Command**: `w32tm /resync`
+- **Command**: `w32tm /resync` (with error handling)
 
 ### 3. 🔍 List-Running-Processes.bat
 Lists all running processes with CPU and memory usage.
@@ -54,7 +54,7 @@ Empties the Recycle Bin.
 ### 7. 🔄 Check-Windows-Updates.bat
 Checks for available Windows updates.
 - **Usage**: No special privileges required.
-- **Command**: `powershell -command "Get-WindowsUpdateLog"`
+- **Command**: `powershell -command "try { Get-HotFix | Select-Object HotFixID, Description, InstalledOn | Format-Table -AutoSize } catch { Write-Host 'Error checking updates.' }"`
 
 ### 8. 💾 Backup-Registry.bat
 Exports the HKLM registry hive to a file.
@@ -97,9 +97,9 @@ Displays active network connections.
 - **Command**: `powershell -command "Get-NetTCPConnection | Select-Object LocalAddress, LocalPort, RemoteAddress, RemotePort, State"`
 
 ### 16. 🧠 Clear-RAM-Cache.bat
-Clears RAM cache using garbage collection.
+Clears RAM cache using garbage collection and system idle tasks.
 - **Usage**: No special privileges required.
-- **Command**: `powershell -command "Clear-Host; for ($i = 0; $i -lt 10; $i++) { [System.GC]::Collect(); [System.GC]::WaitForPendingFinalizers(); [System.GC]::Collect() }"`
+- **Command**: `powershell -command "try { Clear-Host; [System.GC]::Collect(); [System.GC]::WaitForPendingFinalizers(); rundll32.exe advapi32.dll,ProcessIdleTasks; Write-Host 'RAM cache cleared.' } catch { Write-Host 'Error clearing RAM cache.' }"`
 
 ## 🛠️ Requirements
 

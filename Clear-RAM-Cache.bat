@@ -8,7 +8,7 @@ echo ========================================
 echo.
 echo Clearing RAM cache...
 echo.
-powershell -command "Clear-Host; for ($i = 0; $i -lt 10; $i++) { [System.GC]::Collect(); [System.GC]::WaitForPendingFinalizers(); [System.GC]::Collect() }"
+powershell -command "try { Clear-Host; [System.GC]::Collect(); [System.GC]::WaitForPendingFinalizers(); rundll32.exe advapi32.dll,ProcessIdleTasks; Write-Host 'RAM cache cleared.' } catch { Write-Host 'Error clearing RAM cache.' }"
 echo.
 echo RAM cache cleared!
 echo.

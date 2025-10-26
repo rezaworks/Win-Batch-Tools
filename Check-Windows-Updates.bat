@@ -8,9 +8,9 @@ echo ========================================
 echo.
 echo Checking for Windows Updates...
 echo.
-powershell -command "Get-WindowsUpdateLog"
+powershell -command "try { Get-HotFix | Select-Object HotFixID, Description, InstalledOn | Format-Table -AutoSize } catch { Write-Host 'Error checking updates.' }"
 echo.
-echo Update check initiated!
+echo Update check completed!
 echo.
 echo Press any key to exit...
 pause >nul

@@ -9,8 +9,11 @@ echo.
 echo Updating system time...
 echo.
 w32tm /resync
-echo.
-echo Time updated!
+if %errorlevel% equ 0 (
+    echo Time updated successfully!
+) else (
+    echo Failed to update time. Please check your internet connection or run as administrator.
+)
 echo.
 echo Press any key to exit...
 pause >nul
